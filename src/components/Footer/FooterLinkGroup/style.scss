@@ -1,0 +1,21 @@
+.site-footer__group {
+  h2 {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+
+  a {
+    color: #d0d0d0;
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover {
+      color: #0066ff;
+      text-decoration: underline;
+    }
+  }
+}

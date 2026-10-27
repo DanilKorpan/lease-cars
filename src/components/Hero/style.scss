@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+  width: 100%;
+
+  &__swiper {
+    width: 100%;
+    height: min(850px, 100vh);
+    min-height: 620px;
+  }
+
+  .swiper-pagination {
+    bottom: 32px !important;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 3;
+  }
+
+  .swiper-pagination-bullet {
+    width: 100px;
+    height: 3px;
+    border-radius: 0;
+    background: #ffffff;
+    opacity: 0.4;
+    margin: 0 !important;
+    transition: opacity 0.3s ease;
+
+    &-active {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    &__swiper {
+      min-height: 560px;
+      height: 78vh;
+    }
+
+    .swiper-pagination-bullet {
+      width: 64px;
+    }
+  }
+}

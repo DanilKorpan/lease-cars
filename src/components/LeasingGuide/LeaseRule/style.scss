@@ -1,0 +1,46 @@
+.leasing-guide__rule {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: center;
+  gap: 140px;
+
+  p {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+}
+
+.leasing-guide__number {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #0066ff;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .leasing-guide__rule {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .leasing-guide__number {
+    width: 64px;
+    height: 64px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leasing-guide__rules {
+    padding-left: 0;
+  }
+
+  .leasing-guide__rule {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,38 @@
+.considerations {
+  padding: 20px 0 100px;
+
+  &__intro {
+    max-width: 650px;
+    margin: 18px auto 34px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 38px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .considerations__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .considerations {
+    padding-bottom: 64px;
+
+    &__grid {
+      grid-template-columns: 1fr;
+      max-width: 330px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.leasing-guide {
+  padding: 40px 20px 76px;
+
+  &__copy {
+    max-width: 594px;
+    margin: 0 auto;
+  }
+
+  .section__title {
+    font-size: 48px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  &__intro {
+    margin: 28px 0 48px;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  &__subheading {
+    margin-bottom: 42px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  &__rules {
+    display: grid;
+    gap: 38px;
+    padding-left: 80px;
+  }
+
+  &__outro {
+    margin: 48px 0 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 760px) {
+  .leasing-guide {
+    padding-top: 20px;
+
+    .section__title {
+      font-size: 34px;
+    }
+
+    &__intro {
+      margin: 24px 0 34px;
+    }
+
+    &__subheading {
+      margin-bottom: 30px;
+      font-size: 21px;
+    }
+
+    &__rules {
+      gap: 28px;
+    }
+
+    &__outro {
+      margin-top: 34px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .leasing-guide {
+    padding: 12px 20px 64px;
+
+    .section__title {
+      font-size: min(26px, 7.5vw);
+    }
+
+    &__subheading {
+      font-size: 20px;
+    }
+  }
+}
