@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Header from "./components/Header";
 import ContactUsPage from "./pages/ContactUsPage";
+import NewCarsPage from "./pages/NewCarsPage";
 import Hero from "./components/Hero";
 import WhyLease from "./components/WhyLease";
 import LeasingGuide from "./components/LeasingGuide";
@@ -39,12 +40,12 @@ const ScrollToHash = () => {
 
 const SiteLayout = () => {
   const { pathname } = useLocation();
-  const isContactPage = pathname === "/contact-us";
+  const isSolidHeader = ["/contact-us", "/new-cars"].includes(pathname);
 
   return (
     <>
       <ScrollToHash />
-      <Header variant={isContactPage ? "solid" : "overlay"} />
+      <Header variant={isSolidHeader ? "solid" : "overlay"} />
       <Outlet />
       <Footer />
     </>
@@ -58,6 +59,7 @@ const App = () => {
         <Route element={<SiteLayout />}>
           <Route index element={<HomePage />} />
           <Route path="contact-us" element={<ContactUsPage />} />
+          <Route path="new-cars" element={<NewCarsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

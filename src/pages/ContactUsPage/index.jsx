@@ -1,25 +1,7 @@
 import { useEffect, useState } from "react";
 import "./style.scss";
-import ContactArticleCard from "./ContactArticleCard";
-import toyotaTrailImage from "../../assets/images/contact-toyota-trail.jpg";
-import roadTripDogImage from "../../assets/images/contact-road-trip-dog.jpg";
-
-const ARTICLES = [
-  {
-    image: toyotaTrailImage,
-    imageAlt: "Toyota driving across a rocky trail",
-    title: "An easier way to buy your next Toyota",
-    summary:
-      "Explore a simpler way to find the Toyota that fits your next adventure.",
-  },
-  {
-    image: roadTripDogImage,
-    imageAlt: "Dog enjoying a road trip with its head out of the car window",
-    title: "A Guide to Road-Tripping With Pets",
-    summary:
-      "Get ready for a more comfortable road trip with your four-legged travel companion.",
-  },
-];
+import ArticleCard from "../../components/ArticleCard";
+import { ARTICLES } from "../../constants/articleData";
 
 const ContactUsPage = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -86,7 +68,7 @@ const ContactUsPage = () => {
         <div className="container">
           <div className="contact-page__article-grid">
             {ARTICLES.map((article) => (
-              <ContactArticleCard
+              <ArticleCard
                 key={article.title}
                 {...article}
                 showSummary={showArticleSummaries}

@@ -1,0 +1,129 @@
+.new-cars-page {
+  &__catalog {
+    padding: 48px 0 72px;
+  }
+
+  &__categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px 40px;
+    margin: 28px 0 44px;
+  }
+
+  &__category {
+    padding: 0;
+    border: 0;
+    color: #151515;
+    background: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+
+    &:hover,
+    &.is-active {
+      color: #0066ff;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__show-all,
+  &__show-more {
+    display: block;
+    min-width: 180px;
+    margin: 32px auto 0;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #151515;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+
+    &:hover {
+      background: #0066ff;
+    }
+  }
+
+  &__articles {
+    padding: 0 0 96px;
+  }
+
+  &__article-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .new-cars-page__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .new-cars-page {
+    &__catalog {
+      padding: 40px 0 56px;
+    }
+
+    &__categories {
+      gap: 14px 24px;
+      margin: 24px 0 32px;
+    }
+
+    &__category {
+      font-size: 14px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px 14px;
+    }
+
+    &__article-grid {
+      gap: 28px;
+    }
+  }
+
+  .vehicle-card {
+    &__content {
+      padding: 10px 8px 8px;
+    }
+
+    h2 {
+      font-size: 15px;
+    }
+
+    &__starting-price {
+      font-size: 11px;
+    }
+
+    &__monthly-payment {
+      font-size: 17px;
+    }
+
+    &__details {
+      margin: 10px -8px -8px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .new-cars-page {
+    &__article-grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+    }
+  }
+}
